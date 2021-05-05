@@ -7,12 +7,30 @@ import { getBasketTotal } from './reducer'
 import { useStateValue } from './StateProvider'
 import { useHistory } from 'react-router'
 import { IconButton } from '@material-ui/core';
+import { auth } from './firebase'
 
 function Header() {
-    const [{ user, basket }] = useStateValue()
+    const [{ user, basket }, dispatch] = useStateValue()
     const history = useHistory()
     const [menu, setMenu] = useState(false)
     const [displayOverlay, setDisplayOverlay] = useState(false)
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut()
+            dispatch({
+              type: 'SET_USER',
+              user: null
+            })
+        } else {
+            dispatch({
+                type: 'SET_LASTURL',
+                lastUrl: window.location.pathname
+            })
+              
+            history.push('/login')
+        }
+    }
 
     useEffect(() => {
         if(menu) {
@@ -85,11 +103,14 @@ function Header() {
                         </span>
                     </div>
                 </section>
-                <div><PersonOutlined fontSize="small" /><span>{user ? user.displayName : 'Guest'}</span></div>
+                <div onClick={handleAuthentication}>
+                    <PersonOutlined fontSize="small" style={{color: user ? 'rgb(0, 172, 0)' : ''}} />
+                    <span>{user ? user.displayName : 'Guest'}</span>
+                </div>
             </div>
-            <nav onClick={() => history.push('/')}>HOME</nav>
-            <nav onClick={() => history.push('/checkout')}>CHECKOUT</nav>
-            <nav onClick={() => history.push('/contact')}>CONTACT</nav>
+            <nav onClick={() => {history.push('/'); setMenu(false)}}>HOME</nav>
+            <nav onClick={() => {history.push('/checkout'); setMenu(false)}}>CHECKOUT</nav>
+            <nav onClick={() => {history.push('/contact'); setMenu(false)}}>CONTACT</nav>
             <div><Facebook /><LinkedIn /><Twitter /></div>
         </aside>
         {displayOverlay && <div className="header__overlay" onClick={() => setMenu(false)}></div>}

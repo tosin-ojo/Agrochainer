@@ -50,7 +50,7 @@
   border: solid 1px rgb(245, 245, 245);
 }
 
-.home__topRight > div:first-child > button {
+.home__topRight > div:first-child > a > button {
   height: 40px;
   outline: none;
   padding: 5px 15px;
@@ -324,6 +324,11 @@
 }
 
 @media only screen and (max-width: 499px) {
+  .home__topRight > div:nth-child(2) > div:nth-child(2) > img {
+    width: 200px;
+    top: 20%;
+  }
+
   .home__bottom > div:first-child > picture {
     grid-template-columns: 1fr;
   }

@@ -34,7 +34,7 @@ function Paystack() {
     }
 
     const handlePaystackSuccessAction = () => {
-        displayMessage('success', 'Transaction successfull')
+        displayMessage('success', 'Transaction successful')
         history.replace('/')
     }
 

@@ -30,7 +30,7 @@ function CheckoutProduct({ id, image, title, price, rating, quantity }) {
             type: 'REMOVE_FROM_BASKET',
             id
         })
-        displayMessage('Produce removed from basket')
+        displayMessage('Item removed from basket')
         setRemoving(false)
     }
 

@@ -11,9 +11,25 @@ function Checkout() {
     const [{ user, basket }, dispatch] = useStateValue()
     const history = useHistory()
 
+    const displayMessage = (severity, message) => {
+        dispatch({
+            type: 'ADD_FLASH_MESSAGE',
+            message: {
+                severity,
+                message,
+                duration: 5000
+            }
+        })
+
+        dispatch({
+            type: 'SHOW_FLASH_MESSAGE',
+            showFlash: true
+        })
+    }
+
     const handleContinueShopping = async() => {
         if(basket.length < 1) {
-            return history.push('/')
+            return displayMessage('error', 'Basket is empty!')
         }
 
         if(!user) {

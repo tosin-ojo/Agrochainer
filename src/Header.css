@@ -89,7 +89,6 @@
   right: -260px;
   opacity: 0;
   background-color: white;
-  box-shadow: 1px 1px 5px 2px #ccc;
   z-index: 100;
   height: 100vh;
   width: 230px;
@@ -133,7 +132,7 @@
 .header__aside > div > div,
 .header__aside > div > section {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 

@@ -14,6 +14,7 @@ import { IconButton } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
 import Confirmation from './Confirmation';
 import Footer from './Footer';
+import Contact from './Contact';
 
 function App() {
   const [{ flash, showFlash }, dispatch] = useStateValue()
@@ -97,6 +98,13 @@ function App() {
             <div className="app">
               <Header />
               <Payment />
+            </div>
+          </Route>
+
+          <Route path="/contact">
+            <div className="app">
+              <Header />
+              <Contact />
             </div>
           </Route>
 

@@ -44,7 +44,7 @@ function ProduceDetails() {
             }
         })
 
-        displayMessage('success', 'Produce added to basket')
+        displayMessage('success', 'Item added to basket')
     }
 
     const closeDetails = () => {

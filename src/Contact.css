@@ -1,0 +1,93 @@
+.contact > img {
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.contact__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__about {
+  width: 360px;
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.contact__body > form {
+  width: 360px;
+  box-shadow: 1px 1px 5px 2px #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contact__body > form > h3 {
+  text-align: center;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 10px;
+  color: rgb(0, 172, 0);
+}
+
+.contact__body > form > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__body > form > label > span {
+  font-size: 15px;
+  color: #5c5c5c;
+  padding: 10px;
+}
+
+.contact__body > form > label > input,
+.contact__body > form > label > textarea {
+  border: none;
+  outline: none;
+  padding: 10px;
+  box-shadow: 1px 1px 5px 2px #ccc;
+}
+
+.contact__body > form > label > textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact__body > form > div {
+  width: 100%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact__body > form > div > button {
+  background-color: rgb(0, 172, 0);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+
+.contact__icons {
+  margin-top: 50px;
+  color: #5c5c5c;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 499px) {
+  .contact__about {
+    width: 95%;
+  }
+
+  .contact__body > form {
+    width: 95%;
+  }
+}
