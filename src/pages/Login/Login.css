@@ -8,7 +8,6 @@
 
 .login__logo {
   display: flex;
-  margin-top: 10%;
   margin-bottom: 30px;
   object-fit: contain;
   width: 100px;

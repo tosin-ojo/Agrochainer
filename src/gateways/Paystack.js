@@ -1,8 +1,8 @@
 import React from 'react'
 import './Paystack.css'
 import { PaystackButton } from 'react-paystack'
-import { useStateValue } from './StateProvider'
-import { getBasketTotal } from './reducer'
+import { useStateValue } from '../StateProvider'
+import { getBasketTotal } from '../reducer'
 import { useHistory } from 'react-router'
 
 function Paystack() {

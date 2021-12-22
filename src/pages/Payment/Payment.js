@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import CurrencyFormat from 'react-currency-format'
 import './Payment.css'
-import { getBasketTotal } from './reducer'
-import { useStateValue } from './StateProvider'
+import { getBasketTotal } from '../../reducer'
+import { useStateValue } from '../../StateProvider'
 import { useHistory } from 'react-router-dom'
 import { Star } from '@material-ui/icons'
 

@@ -2,9 +2,9 @@ import { AddShoppingCartOutlined } from '@material-ui/icons'
 import React, { useState } from 'react'
 import CurrencyFormat from 'react-currency-format'
 import './Home.css'
-import ProduceDetails from './ProduceDetails'
-import { useStateValue } from './StateProvider'
-import { auth } from './firebase'
+import ProduceDetails from '../../components/ProduceDetails/ProduceDetails'
+import { useStateValue } from '../../StateProvider'
+import { auth } from '../../utils/firebase'
 import { useHistory } from 'react-router-dom'
 
 function Home() {

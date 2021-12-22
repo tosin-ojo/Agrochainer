@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import './Confirmation.css'
-import { useStateValue } from './StateProvider'
-import Order from './Order'
+import { useStateValue } from '../../StateProvider'
+import Order from '../../components/Order/Order'
 
 function Confirmation() {
     const [{basket}, dispatch] = useStateValue()

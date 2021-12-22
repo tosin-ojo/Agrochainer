@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { auth } from './firebase'
-import Logo from './images/agrocunda.png'
+import { auth } from '../../utils/firebase'
+import Logo from '../../images/agrocunda.png'
 import './Login.css'
-import { useStateValue } from './StateProvider'
+import { useStateValue } from '../../StateProvider'
 
 function Login() {
     const [{ lastUrl }, dispatch] = useStateValue()

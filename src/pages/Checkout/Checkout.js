@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Checkout.css'
-import CheckoutProduct from './CheckoutProduct'
-import { useStateValue } from './StateProvider'
-import { getBasketTotal, getItemTotal } from './reducer'
+import CheckoutProduct from '../../components/CheckoutProduct/CheckoutProduct'
+import { useStateValue } from '../../StateProvider'
+import { getBasketTotal, getItemTotal } from '../../reducer'
 import CurrencyFormat from 'react-currency-format'
 import { useHistory } from 'react-router-dom'
 

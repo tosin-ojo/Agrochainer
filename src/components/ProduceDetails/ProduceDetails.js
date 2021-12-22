@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Add, Cancel, NavigateBefore, NavigateNext, Remove, Star } from '@material-ui/icons'
 import './ProduceDetails.css'
 import { IconButton } from '@material-ui/core'
-import { useStateValue } from './StateProvider'
+import { useStateValue } from '../../StateProvider'
 import CurrencyFormat from 'react-currency-format'
 
 function ProduceDetails() {

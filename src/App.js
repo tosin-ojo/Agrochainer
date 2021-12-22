@@ -1,20 +1,20 @@
 import React, { useCallback, useEffect } from 'react'
 import './App.css';
-import Header from './Header';
-import Home from './Home';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Checkout from './Checkout';
-import Login from './Login';
-import { auth } from './firebase';
+import Checkout from './pages/Checkout/Checkout';
+import Login from './pages/Login/Login';
+import { auth } from './utils/firebase';
 import { useStateValue } from './StateProvider';
-import Payment from './Payment';
+import Payment from './pages/Payment/Payment';
 import Alert from '@material-ui/lab/Alert';
 import Fade from '@material-ui/core/Fade'
 import { IconButton } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
-import Confirmation from './Confirmation';
-import Footer from './Footer';
-import Contact from './Contact';
+import Confirmation from './pages/Confirmation/Confirmation';
+import Footer from './components/Footer/Footer';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   const [{ flash, showFlash }, dispatch] = useStateValue()
